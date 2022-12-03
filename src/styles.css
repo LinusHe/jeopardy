@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "DejaVu Sans", sans-serif;
+  background-color: #3496BA;
+}
+
+button {
+  color: #FF8000;
+  background-color: #3496BA;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+button:disabled {
+  background-color: #89BBCD;
+  color: #B19980;
+  border: none;
+}

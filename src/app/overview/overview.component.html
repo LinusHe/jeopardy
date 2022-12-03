@@ -1,0 +1,10 @@
+<div class="grid-layout">
+  <div *ngFor="let ele of categories.categories" class="column">
+    <h1 class="headline"> {{ ele.category }} </h1>
+    <button *ngFor="let question of ele.questions" [disabled]="question.answered"
+            (click)="navigateToDetails(question)" [class]="question.answered ? '' : 'glow-on-hover'"
+            class="question">
+      <p>{{ question.amount}} </p>
+    </button>
+  </div>
+</div>
