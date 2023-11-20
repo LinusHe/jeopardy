@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {data, Question} from "../data/data";
+import {finatixler_data} from "../data/data-wilde-finatixler";
+import {Question} from "../model/data";
 
 @Component({
   selector: 'app-details',
@@ -8,7 +9,9 @@ import {data, Question} from "../data/data";
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
+  private json_data = finatixler_data;
   public questionId: number;
+  public category: string | undefined;
   public question: Question | undefined;
   public answer: string = '';
 
@@ -18,9 +21,11 @@ export class DetailsComponent {
   }
 
   private findQuestionById() {
-    this.question = data.categories.map(categories => {
-      return categories.questions.find(ques => this.questionId === ques.id)
-    }).find(obj => obj);
+    this.json_data.categories
+      .find((categories) => {
+        this.category = categories.category;
+        return this.question = categories.questions.find(ques => this.questionId === ques.id)
+      });
   }
 
   displayAnswer() {
