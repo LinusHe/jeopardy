@@ -3,12 +3,12 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: "DejaVu Sans", sans-serif;
-  background-color: #3496BA;
+  background-color: #F2B4AE;
 }
 
 button {
-  color: #FF8000;
-  background-color: #3496BA;
+  color: #24736B;
+  background-color: #F27E88;
   display: flex;
   width: 100%;
   height: 100%;
@@ -21,7 +21,7 @@ button {
 }
 
 button:disabled {
-  background-color: #89BBCD;
-  color: #B19980;
+  background-color: #F2B4AE;
+  color: #7B8DA6;
   border: none;
 }

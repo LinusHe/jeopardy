@@ -1,14 +1,14 @@
 .headline {
-  color: #FF8000;
+  color: #24736B;
   min-height: 200px;
   font-size: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3496BA;
+  background-color: #F27E88;
   width: 100%;
   text-align: center;
-  border: #ff7300 5px solid;
+  border: #F2B4AE 5px solid;
 }
 
 .grid-layout {
@@ -66,8 +66,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #3496BA;
-  left: 0;
+  background: #F27E88;
   top: 0;
   border-radius: 10px;
 }

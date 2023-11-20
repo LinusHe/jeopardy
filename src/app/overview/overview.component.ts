@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Categories, data, Question} from "../data/data";
 import {Router} from "@angular/router";
+import {finatixler_data} from "../data/data-wilde-finatixler";
+import {Categories, Question} from "../model/data";
 
 
 @Component({
@@ -9,13 +10,15 @@ import {Router} from "@angular/router";
   styleUrls: ['./overview.component.scss']
 })
 export class OverviewComponent implements OnInit {
-  public categories: Categories = data;
+
+  private json_data = finatixler_data;
+  public categories: Categories = this.json_data;
 
   constructor(private router: Router) {
   }
 
   ngOnInit() {
-    data.categories.forEach(categories => categories.questions.forEach(question => {
+    this.json_data.categories.forEach(categories => categories.questions.forEach(question => {
       question.answered = !!localStorage.getItem(question.id.toString());
     }))
   }

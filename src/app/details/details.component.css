@@ -10,7 +10,7 @@
 }
 
 #answer{
-  color: #FF8000;
+  color: #24736B;
 }
 
 .container {
@@ -32,11 +32,12 @@ button {
 }
 
 button:hover {
-  background-color: #89BBCD;
+  background-color: #7B8DA6;
 }
 
 .image-size{
   max-width: 90%;
-  height: 60vh;
+  min-height: 450px;
+  max-height: 600px;
   margin: 10px 10px 30px;
 }

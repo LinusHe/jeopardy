@@ -1,5 +1,6 @@
 <div class="outer-container">
   <div  class="container">
+    <h3>- {{category}} -</h3>
     <h1>{{question?.question}}</h1>
     <img class="image-size" *ngIf="question?.image" [src]=question?.image alt="{{question?.image}}">
     <button (click)="displayAnswer()">Display Answer</button>
