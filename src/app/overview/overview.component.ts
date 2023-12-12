@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {finatixler_data} from "../data/data-wilde-finatixler";
-import {Categories, Question} from "../model/data";
+import {Categories, FinatixCategories, Question} from "../model/data";
+import {finatix_christmas_data} from "../data/finatix-christmas";
 
 
 @Component({
@@ -11,8 +11,8 @@ import {Categories, Question} from "../model/data";
 })
 export class OverviewComponent implements OnInit {
 
-  private json_data = finatixler_data;
-  public categories: Categories = this.json_data;
+  private json_data = finatix_christmas_data;
+  public categories: FinatixCategories = this.json_data;
 
   constructor(private router: Router) {
   }

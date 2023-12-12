@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {finatixler_data} from "../data/data-wilde-finatixler";
 import {Question} from "../model/data";
+import {finatix_christmas_data} from "../data/finatix-christmas";
 
 @Component({
   selector: 'app-details',
@@ -9,11 +9,12 @@ import {Question} from "../model/data";
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-  private json_data = finatixler_data;
+  private json_data = finatix_christmas_data;
   public questionId: number;
   public category: string | undefined;
   public question: Question | undefined;
   public answer: string = '';
+  public answerImage: string | undefined;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     this.questionId = parseInt(activatedRoute.snapshot.queryParams['param']);
@@ -30,6 +31,7 @@ export class DetailsComponent {
 
   displayAnswer() {
     this.answer = this.question?.answer ?? 'no answer found';
+    this.answerImage = this.question?.answerImage;
 
     setTimeout(() => {
       localStorage.setItem(this.questionId.toString(), 'true');

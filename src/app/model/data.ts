@@ -3,6 +3,7 @@ export interface Question {
   amount: string,
   question: string,
   answer: string,
+  answerImage?: string,
   answered?: boolean
   image?: string
 }
@@ -20,6 +21,16 @@ export interface Category {
 
 export interface Categories {
   categories: [
+    Category,
+    Category,
+    Category,
+    Category,
+    Category,
+  ]
+}
+export interface FinatixCategories {
+  categories: [
+    Category,
     Category,
     Category,
     Category,
