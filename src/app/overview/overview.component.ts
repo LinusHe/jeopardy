@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {Categories, FinatixCategories, Question} from "../model/data";
+import {FinatixCategories, Question} from "../model/data";
 import {finatix_christmas_data} from "../data/finatix-christmas";
 
 

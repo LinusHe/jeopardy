@@ -1,4 +1,4 @@
-import {Categories, FinatixCategories} from "../model/data";
+import {FinatixCategories} from "../model/data";
 
 export const finatix_christmas_data: FinatixCategories = {
   "categories": [
