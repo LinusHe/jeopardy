@@ -95,7 +95,7 @@ export const finatix_christmas_data: FinatixCategories = {
           id: 12,
           "amount": "400",
           "question": "Welcher ist der Umsatzstärkste Monat?",
-          "answer": "LARS FRAGEN",
+          "answer": "Mai, Juni, Juli, September & Oktober",
         },
         {
           id: 13,
