@@ -2,16 +2,18 @@
   <div class="inner-container">
     <h2>• {{category}} • {{question?.amount}} •</h2>
     <h1 *ngIf="question?.question" [innerHTML]="question?.question"></h1>
+    <img class="image-size" *ngIf="question?.image || (answered && question?.answerImage)"
+         src="{{answered ? question?.answerImage : question?.image }}"
+         alt="{{answered ? question?.answerImage : question?.image }}">
+
     <!--    question -->
     <ng-container *ngIf="!answered; else answerTemplate">
-      <img class="image-size" *ngIf="question?.image" src="{{question?.image}}" alt="{{question?.image}}">
       <button (click)="displayAnswer()">Antwort anzeigen</button>
     </ng-container>
 
     <!--    answer -->
     <ng-template #answerTemplate>
-      <img class="image-size" *ngIf="question?.answerImage" [src]=question?.answerImage alt="{{question?.answerImage}}">
-      <h1 id="answer">{{question?.answer}}</h1>
+      <h2 id="answer">{{question?.answer}}</h2>
     </ng-template>
   </div>
 </div>

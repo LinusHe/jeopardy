@@ -1,3 +1,5 @@
+@use 'src/variables' as *;
+
 h1 {
   font-size: 4rem;
 }
@@ -9,12 +11,13 @@ h2 {
 button {
   width: fit-content;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 1.5rem;
   padding: 1rem;
 }
 
 .outer-container {
+  color: $font-color-dark;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -31,11 +34,11 @@ button {
   margin: 5rem;
 }
 
-#answer {
-  color: #24736B;
-}
-
 .image-size {
   max-height: 100%;
   max-width: 100%;
+}
+
+#answer {
+  color: $btn-hover-background;
 }

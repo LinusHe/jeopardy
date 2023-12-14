@@ -48,47 +48,37 @@ export const finatix_christmas_data: FinatixCategories = {
       ]
     },
     {
-      "category": "Mustererkennung",
+      "category": "ChristmasGPT",
       "questions": [
         {
-          id: 6,
+          id: 26,
           "amount": "200",
-          "question": "",
-          "answer": "",
-          "image": "",
-          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
+          "question": "Was war der Prompt für diese Antwort? </br> Entwickler verbringen Weihnachten damit, festzustellen, dass selbst der Weihnachtsmann Probleme mit Versionskontrolle hat – immer wieder wird behauptet, dass er nur einen 'master branch' hat!",
+          "answer": "Was machen Entwickler zu Weihnachten? ",
         },
         {
-          id: 7,
+          id: 27,
           "amount": "400",
-          "question": "",
-          "answer": "",
-          "image": "",
-          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
+          "question": "Was war der Prompt für diese Antwort? </br> Die Finatix und Weihnachten haben gemeinsam, dass beide oft mit dem Wunsch verbunden sind, dass am Ende alles im grünen Bereich ist!",
+          "answer": "Was haben die Finatix und Weihnachten gemeinsam?",
         },
         {
-          id: 8,
+          id: 28,
           "amount": "600",
-          "question": "",
-          "answer": "",
-          "image": "",
-          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
+          "question": "Was war der Prompt für diese Antwort? </br> Warum liebt der Entwickler Weihnachten? Weil er immer darauf wartet, dass es 'debuggt' wird und alles reibungslos abläuft!",
+          "answer": "Erzähl mir einen weihnachtlichen Witz über Entwickler",
         },
         {
-          id: 9,
+          id: 29,
           "amount": "800",
-          "question": "",
-          "answer": "",
-          "image": "",
-          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
+          "question": "Was war der Prompt für diese Antwort? </br> Warum ist Jens der beste Weihnachtsmann? Weil er immer “Jingle Bells singt und dabei so jensational klingt!",
+          "answer": "Wortwitz über Weihnachten, der den Namen Jens enthält",
         },
         {
-          id: 10,
+          id: 30,
           "amount": "1000",
-          "question": "",
-          "answer": "",
-          "image": "",
-          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
+          "question": "Was war der Prompt für diese Antwort? </br> Der Schwibbogen stammt aus dem Erzgebirge in Deutschland und hat seine Wurzeln in der Bergmannstradition, wo er als Symbol für den Eingang eines Stollens diente.",
+          "answer": "Woher kommt der Schwippbogen? In einer kurzen Antwort",
         }
       ]
     },
@@ -124,6 +114,51 @@ export const finatix_christmas_data: FinatixCategories = {
           "amount": "1000",
           "question": "Wie viele Bewerbungen hatten wir im vergangenen Jahr? </br> (+/- 10)",
           "answer": "206",
+        }
+      ]
+    },
+    {
+      "category": "Mustererkennung",
+      "questions": [
+        {
+          id: 6,
+          "amount": "200",
+          "question": "",
+          "answer": "",
+          "image": "./assets/finatix-christmas/efi_question.png",
+          "answerImage": "./assets/finatix-christmas/efi_answer.png"
+        },
+        {
+          id: 7,
+          "amount": "400",
+          "question": "",
+          "answer": "",
+          "image": "./assets/finatix-christmas/spiderman_question.png",
+          "answerImage": "./assets/finatix-christmas/spiderman_answer.png"
+        },
+        {
+          id: 8,
+          "amount": "600",
+          "question": "",
+          "answer": "",
+          "image": "./assets/finatix-christmas/fabian_question.png",
+          "answerImage": "./assets/finatix-christmas/fabian_answer.png"
+        },
+        {
+          id: 9,
+          "amount": "800",
+          "question": "",
+          "answer": "",
+          "image": "./assets/finatix-christmas/scrum_question.png",
+          "answerImage": "./assets/finatix-christmas/scrum_answer.png"
+        },
+        {
+          id: 10,
+          "amount": "1000",
+          "question": "",
+          "answer": "",
+          "image": "./assets/finatix-christmas/oli_question.png",
+          "answerImage": "./assets/finatix-christmas/oli_answer.png"
         }
       ]
     },
@@ -196,40 +231,7 @@ export const finatix_christmas_data: FinatixCategories = {
           "answer": "10 Tage",
         }
       ]
-    }, {
-      "category": "ChristmasGPT",
-      "questions": [
-        {
-          id: 26,
-          "amount": "200",
-          "question": "Was war der Prompt für diese Antwort? </br> Entwickler verbringen Weihnachten damit, festzustellen, dass selbst der Weihnachtsmann Probleme mit Versionskontrolle hat – immer wieder wird behauptet, dass er nur einen 'master branch' hat!",
-          "answer": "Was machen Entwickler zu Weihnachten? ",
-        },
-        {
-          id: 27,
-          "amount": "400",
-          "question": "Was war der Prompt für diese Antwort? </br> Die Finatix und Weihnachten haben gemeinsam, dass beide oft mit dem Wunsch verbunden sind, dass am Ende alles im grünen Bereich ist!",
-          "answer": "Was haben die Finatix und Weihnachten gemeinsam?",
-        },
-        {
-          id: 28,
-          "amount": "600",
-          "question": "Was war der Prompt für diese Antwort? </br> Warum liebt der Entwickler Weihnachten? Weil er immer darauf wartet, dass es 'debuggt' wird und alles reibungslos abläuft!",
-          "answer": "Erzähl mir einen weihnachtlichen Witz über Entwickler",
-        },
-        {
-          id: 29,
-          "amount": "800",
-          "question": "Was war der Prompt für diese Antwort? </br> Warum ist Jens der beste Weihnachtsmann? Weil er immer “Jingle Bells singt und dabei so jensational klingt!",
-          "answer": "Wortwitz über Weihnachten, der den Namen Jens enthält",
-        },
-        {
-          id: 30,
-          "amount": "1000",
-          "question": "Was war der Prompt für diese Antwort? </br> Der Schwibbogen stammt aus dem Erzgebirge in Deutschland und hat seine Wurzeln in der Bergmannstradition, wo er als Symbol für den Eingang eines Stollens diente.",
-          "answer": "Woher kommt der Schwippbogen? In einer kurzen Antwort",
-        }
-      ]
-    }
+    },
+
   ]
 }

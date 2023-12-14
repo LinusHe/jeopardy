@@ -6,7 +6,7 @@ import {finatix_christmas_data} from "../data/finatix-christmas";
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent {
   private json_data = finatix_christmas_data;

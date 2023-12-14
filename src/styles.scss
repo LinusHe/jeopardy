@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+html, body {
+  background-color: $light-background;
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 1vw;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: url(https://cur.cursors-4u.net/holidays/hol-3/hol278.cur), auto !important;
+}
+
+button {
+  color: $font-color-dark;
+  background-color: $btn-background;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  align-items: center;
+  cursor: pointer!important;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $btn-hover-background;
+    color: $font-color-light;
+  }
+}
+
+button:disabled {
+  background-color: $btn-disabled-background;
+  color: $btn-disabled-font-color;
+  border: none;
+}
+
+
