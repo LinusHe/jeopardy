@@ -8,40 +8,42 @@ export const finatix_christmas_data: FinatixCategories = {
         {
           id: 1,
           "amount": "200",
-          "question": "Wen suchen wir?",
+          "question": "",
           "answer": "Ilyes",
-          "image": "./assets/birthday/chin1.jpeg",
-          "answerImage": "./assets/birthday/chin1.jpeg"
+          "image": "./assets/finatix-christmas/ilyes.png",
+          "answerImage": "./assets/finatix-christmas/ilyes_answer.jpg"
         },
         {
           id: 2,
           "amount": "400",
-          "question": "Wen suchen wir?",
-          "answer": "In den Anden (Südamerika)",
-          "image": "./assets/birthday/chin2.jpeg",
-          "answerImage": "./assets/birthday/chin1.jpeg"
+          "question": "",
+          "answer": "Lars",
+          "image": "./assets/finatix-christmas/lars.jpg",
+          "answerImage": "./assets/finatix-christmas/lars_answer.jpg"
         },
         {
           id: 3,
           "amount": "600",
-          "question": "Wen suchen wir?",
-          "answer": "Zwischen 0.5 - 0.8kg",
-          "image": "./assets/birthday/chin3.jpeg",
-          "answerImage": "./assets/birthday/chin1.jpeg"
+          "question": "",
+          "answer": "Maik",
+          "image": "./assets/finatix-christmas/maik.jpg",
+          "answerImage": "./assets/finatix-christmas/maik_answer.jpg"
         },
         {
           id: 4,
           "amount": "800",
-          "question": "Wen suchen wir?",
-          "answer": "100",
-          "image": "./assets/birthday/chin4.jpeg"
+          "question": "",
+          "answer": "Mirco",
+          "image": "./assets/finatix-christmas/smirco.jpg",
+          "answerImage": "./assets/finatix-christmas/smirco_answer.jpg"
         },
         {
           id: 5,
           "amount": "1000",
-          "question": "Wen suchen wir?",
-          "answer": "60 - 80",
-          "image": "./assets/birthday/chin5.jpg"
+          "question": "",
+          "answer": "Eddi und Flo Z.",
+          "image": "./assets/finatix-christmas/eddi_flo_2.png",
+          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
         }
       ]
     },
@@ -52,36 +54,41 @@ export const finatix_christmas_data: FinatixCategories = {
           id: 6,
           "amount": "200",
           "question": "",
-          "answer": "Badezimmervorhang",
-          "image": "./assets/birthday/wohnung5.jpeg"
+          "answer": "",
+          "image": "",
+          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
         },
         {
           id: 7,
           "amount": "400",
           "question": "",
-          "answer": "Eine echte Küche",
-          "image": "./assets/birthday/wohnung3.jpeg"
+          "answer": "",
+          "image": "",
+          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
         },
         {
           id: 8,
           "amount": "600",
           "question": "",
-          "answer": "Kein Loch mehr - vllt. Lampe",
-          "image": "./assets/birthday/wohnung4.jpeg"
+          "answer": "",
+          "image": "",
+          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
         },
         {
           id: 9,
           "amount": "800",
           "question": "",
-          "answer": "ein atemberaubender Eyecatcher",
-          "image": "./assets/birthday/wohnung2.jpeg"
+          "answer": "",
+          "image": "",
+          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
         },
         {
           id: 10,
           "amount": "1000",
           "question": "",
-          "answer": "etw. damit meine Nachbarn mich weniger nackt sehen",
-          "image": "./assets/birthday/wohnung1.jpeg"
+          "answer": "",
+          "image": "",
+          "answerImage": "./assets/finatix-christmas/eddi_flo_answer.jpg"
         }
       ]
     },
@@ -109,13 +116,13 @@ export const finatix_christmas_data: FinatixCategories = {
         {
           id: 14,
           "amount": "800",
-          "question": "Schätzfrage: Wie viele Projektteams gibt es?",
+          "question": "Schätzfrage: </br> Wie viele Projektteams gibt es?",
           "answer": "17",
         },
         {
           id: 15,
           "amount": "1000",
-          "question": "Wie viele Bewerbungen hatten wir im vergangenen Jahr? (+/- 10)",
+          "question": "Wie viele Bewerbungen hatten wir im vergangenen Jahr? </br> (+/- 10)",
           "answer": "206",
         }
       ]
@@ -132,25 +139,25 @@ export const finatix_christmas_data: FinatixCategories = {
         {
           id: 17,
           "amount": "400",
-          "question": "Wer hat nie bei XPAY zusammen gearbeitet? [Robin, Mirco, Marcel H.], [Laura, Niklas, Cati] oder [Xavier, Gregor, Patrick]?",
+          "question": "Wer hat nie bei XPAY zusammen gearbeitet? </br> [Robin, Mirco, Marcel H.], </br> [Laura, Niklas, Cati] oder </br>  [Xavier, Gregor, Patrick]?",
           "answer": "Laura, Niklas, Cati",
         },
         {
           id: 18,
           "amount": "600",
-          "question": "Wer war zuerst da: Tilmann oder Jens?",
+          "question": "Wer war zuerst da: </br> Tilmann oder Jens?",
           "answer": "Tilmann",
         },
         {
           id: 19,
           "amount": "800",
-          "question": "Wer war nie im GYD-Team: Jens, Pit, Jan, Johannes, Marcel H., Cati, Mirco oder Gregor?",
+          "question": "Wer war nie im GYD-Team: </br> Jens, Pit, Jan, Johannes, Marcel H., Cati, Mirco oder Gregor?",
           "answer": "Sie waren alle mal im GYD Team - HA",
         },
         {
           id: 20,
           "amount": "1000",
-          "question": "Wer hat bei Payment Next nie zusammen gearbeitet? [Karl, Patrick, Florian Z.], [Su, Natalie, Florian G.] oder [Karl, Xavier, Adrien]?",
+          "question": "Wer hat bei Payment Next nie zusammen gearbeitet? </br> [Karl, Patrick, Florian Z.], </br> [Su, Natalie, Florian G.] oder </br> [Karl, Xavier, Adrien]?",
           "answer": "Karl, Xavier, Adrien",
         }
       ]
@@ -179,7 +186,7 @@ export const finatix_christmas_data: FinatixCategories = {
         {
           id: 24,
           "amount": "800",
-          "question": "Finatix Passwortrichtlinie: Wie viele Zeichen müssen mindestens enthalten sein?",
+          "question": "Finatix Passwortrichtlinie: </br> Wie viele Zeichen müssen mindestens enthalten sein?",
           "answer": "12",
         },
         {
@@ -193,33 +200,33 @@ export const finatix_christmas_data: FinatixCategories = {
       "category": "ChristmasGPT",
       "questions": [
         {
-          id: 21,
+          id: 26,
           "amount": "200",
-          "question": "Was war der Prompt für diese Antwort? Warum ist Jens der beste Weihnachtsmann? Weil er immer “Jingle Bells singt und dabei so jensational klingt!",
+          "question": "Was war der Prompt für diese Antwort? </br> Entwickler verbringen Weihnachten damit, festzustellen, dass selbst der Weihnachtsmann Probleme mit Versionskontrolle hat – immer wieder wird behauptet, dass er nur einen 'master branch' hat!",
           "answer": "Was machen Entwickler zu Weihnachten? ",
         },
         {
-          id: 22,
+          id: 27,
           "amount": "400",
-          "question": "Was war der Prompt für diese Antwort? Die Finatix und Weihnachten haben gemeinsam, dass beide oft mit dem Wunsch verbunden sind, dass am Ende alles im grünen Bereich ist!",
+          "question": "Was war der Prompt für diese Antwort? </br> Die Finatix und Weihnachten haben gemeinsam, dass beide oft mit dem Wunsch verbunden sind, dass am Ende alles im grünen Bereich ist!",
           "answer": "Was haben die Finatix und Weihnachten gemeinsam?",
         },
         {
-          id: 23,
+          id: 28,
           "amount": "600",
-          "question": "Was war der Prompt für diese Antwort? Warum liebt der Entwickler Weihnachten? Weil er immer darauf wartet, dass es 'debuggt' wird und alles reibungslos abläuft!",
-          "answer": "Erzähl mir einen weihnachtlichen Witz über Entwickler?",
+          "question": "Was war der Prompt für diese Antwort? </br> Warum liebt der Entwickler Weihnachten? Weil er immer darauf wartet, dass es 'debuggt' wird und alles reibungslos abläuft!",
+          "answer": "Erzähl mir einen weihnachtlichen Witz über Entwickler",
         },
         {
-          id: 24,
+          id: 29,
           "amount": "800",
-          "question": "Was war der Prompt für diese Antwort? Warum ist Jens der beste Weihnachtsmann? Weil er immer “Jingle Bells singt und dabei so jensational klingt!",
+          "question": "Was war der Prompt für diese Antwort? </br> Warum ist Jens der beste Weihnachtsmann? Weil er immer “Jingle Bells singt und dabei so jensational klingt!",
           "answer": "Wortwitz über Weihnachten, der den Namen Jens enthält",
         },
         {
-          id: 25,
+          id: 30,
           "amount": "1000",
-          "question": "Was war der Prompt für diese Antwort? Der Schwibbogen stammt aus dem Erzgebirge in Deutschland und hat seine Wurzeln in der Bergmannstradition, wo er als Symbol für den Eingang eines Stollens diente.",
+          "question": "Was war der Prompt für diese Antwort? </br> Der Schwibbogen stammt aus dem Erzgebirge in Deutschland und hat seine Wurzeln in der Bergmannstradition, wo er als Symbol für den Eingang eines Stollens diente.",
           "answer": "Woher kommt der Schwippbogen? In einer kurzen Antwort",
         }
       ]

@@ -1,27 +1,31 @@
 html, body {
+  background-color: #F2B4AE;
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 1vw;
   height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
-  font-family: "DejaVu Sans", sans-serif;
-  background-color: #F2B4AE;
 }
 
 button {
   color: #24736B;
   background-color: #F27E88;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  font-size: 50px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  cursor: pointer;
+  align-items: center;
+
+  &:hover {
+    background-color: #7B8DA6;
+  }
 }
 
 button:disabled {
   background-color: #F2B4AE;
   color: #7B8DA6;
   border: none;
+  cursor: default;
 }
+
+

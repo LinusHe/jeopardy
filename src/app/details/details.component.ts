@@ -13,8 +13,7 @@ export class DetailsComponent {
   public questionId: number;
   public category: string | undefined;
   public question: Question | undefined;
-  public answer: string = '';
-  public answerImage: string | undefined;
+  public answered: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     this.questionId = parseInt(activatedRoute.snapshot.queryParams['param']);
@@ -30,8 +29,7 @@ export class DetailsComponent {
   }
 
   displayAnswer() {
-    this.answer = this.question?.answer ?? 'no answer found';
-    this.answerImage = this.question?.answerImage;
+    this.answered = true;
 
     setTimeout(() => {
       localStorage.setItem(this.questionId.toString(), 'true');
