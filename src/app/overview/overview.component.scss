@@ -1,4 +1,4 @@
-@use 'src/variables' as *;
+@use "src/variables" as *;
 
 button {
   font-size: 4rem;
@@ -9,6 +9,7 @@ button {
   justify-content: center;
   margin-bottom: 0.5rem;
 }
+
 
 .headline {
   background-color: $header-background;
@@ -30,6 +31,39 @@ button {
   grid-auto-flow: column;
   gap: 0.5rem;
   height: 100%;
+  width: 100%;
+}
+
+.game-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .groups-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 2px solid $font-color-dark;
+    background: $group-container-background;
+    margin-top: 2rem;
+  }
+
+  .group-container {
+    padding: 2rem 3rem;
+    text-align: center;
+    width: 100%;
+
+    h2,
+    h3 {
+      margin: 0.3rem;
+    }
+
+    &.current-group {
+      background-color: $active-group-background;
+      color: $font-color-light;
+    }
+  }
 }
 
 .column {

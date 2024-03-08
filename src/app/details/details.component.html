@@ -1,10 +1,23 @@
 <div class="outer-container">
   <div class="inner-container">
-    <h2>• {{category}} • {{question?.amount}} •</h2>
-    <h1 *ngIf="question?.question" [innerHTML]="question?.question"></h1>
-    <img class="image-size" *ngIf="question?.image || (answered && question?.answerImage)"
-         src="{{answered ? question?.answerImage : question?.image }}"
-         alt="{{answered ? question?.answerImage : question?.image }}">
+    <div class="header">
+      <h3>
+        • {{ group?.groupName }} • {{ category }} • {{ question?.amount }} •
+      </h3>
+      <h2 *ngIf="isEstimationQuestion" class="estimation-question">
+        Schätzfrage:
+      </h2>
+      <h1 *ngIf="question?.question" [innerHTML]="question?.question"></h1>
+    </div>
+
+    <div class="flex-1">
+      <img
+        class="image-size flex-1"
+        *ngIf="question?.image || (answered && question?.answerImage)"
+        src="{{ answered ? question?.answerImage : question?.image }}"
+        alt="{{ answered ? question?.answerImage : question?.image }}"
+      />
+    </div>
 
     <!--    question -->
     <ng-container *ngIf="!answered; else answerTemplate">
@@ -13,7 +26,69 @@
 
     <!--    answer -->
     <ng-template #answerTemplate>
-      <h2 id="answer">{{question?.answer}}</h2>
+      <h2
+        *ngIf="question?.answer"
+        id="answer"
+        [innerHTML]="question?.answer"
+      ></h2>
     </ng-template>
+
+    <!-- Evaluation -->
+    <div
+      *ngIf="!pointsAwarded && answered && !isEstimationQuestion"
+      class="answer-buttons"
+    >
+      <h2 [class.crossed-out]="selectedGroupIndex !== undefined">
+        {{
+          group?.groupName
+        }}:
+      </h2>
+      <!-- Show these buttons only after the answer is displayed -->
+      <button
+        *ngIf="!pointsAwarded"
+        (click)="markAnswer(true)"
+        class="answer-btn right"
+      >
+        Richtig
+      </button>
+      <button
+        *ngIf="!pointsAwarded"
+        (click)="markAnswer(false)"
+        class="answer-btn wrong"
+      >
+        Falsch
+      </button>
+    </div>
+
+    <div *ngIf="!pointsAwarded && answered" class="group-buttons">
+      <ng-container *ngFor="let grp of allGroups; let i = index">
+        <ng-container *ngIf="isEstimationQuestion; else nonEstimation">
+          <button (click)="awardPointsToGroup(i)" class="group-btn">
+            {{ grp.groupName }}
+          </button>
+        </ng-container>
+        <ng-template #nonEstimation>
+          <button
+            (click)="selectGroup(i)"
+            *ngIf="i !== groupIndex"
+            class="group-btn"
+            [ngClass]="{ selected: selectedGroupIndex === i }"
+          >
+            {{ grp.groupName }}
+          </button>
+        </ng-template>
+      </ng-container>
+    </div>
+
+    <div
+      class="points-message"
+      *ngIf="pointsAwarded"
+      [ngClass]="{
+        success: correctAnswer,
+        fail: !correctAnswer
+      }"
+    >
+      <h1 class="points-message-text">{{ pointsMessage }}</h1>
+    </div>
   </div>
 </div>

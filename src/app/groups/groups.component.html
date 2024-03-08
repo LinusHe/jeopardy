@@ -1,0 +1,19 @@
+<div class="group-view">
+  <div class="grid-layout">
+    <div *ngFor="let group of groups; let i = index" [class.winner]="group.isWinner">
+      <div class="headline">
+        <!-- <h1>{{ group.groupName }}</h1> -->
+        <input [(ngModel)]="group.groupName" (ngModelChange)="updateGroupName(i, group.groupName)" class="editable-group-name"/>
+        <h2 class="group-points">{{ group.points }} Punkte</h2>
+      </div>
+      <div class="points-buttons" *ngIf="!gameOver">
+        <button (click)="subtractPoints(i, 50)">-50</button>
+        <button (click)="addPoints(i, 50)">+50</button>
+      </div>
+      <ul class="group-members">
+        <li *ngFor="let member of group.members">{{ member }}</li>
+      </ul>
+    </div>
+  </div>
+  <button (click)="startGame()" id="start" *ngIf="!gameOver">Start Game</button>
+</div>

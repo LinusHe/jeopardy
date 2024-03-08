@@ -3,6 +3,7 @@ export interface Question {
   amount: string,
   question: string,
   answer: string,
+  isEstimationQuestion?: boolean;
   answerImage?: string,
   answered?: boolean
   image?: string
@@ -28,7 +29,7 @@ export interface Categories {
     Category,
   ]
 }
-export interface FinatixCategories {
+export interface XLCategories {
   categories: [
     Category,
     Category,
@@ -37,4 +38,15 @@ export interface FinatixCategories {
     Category,
     Category,
   ]
+}
+
+export interface Group {
+  groupName: string;
+  members: string[];
+  points: number;
+  isWinner?: boolean;
+}
+
+export interface Groups {
+  groups: Group[];
 }

@@ -1,24 +1,27 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import {AppComponent} from './app.component';
 import {OverviewComponent} from './overview/overview.component';
 import {DetailsComponent} from './details/details.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
-import {SnowflakesComponent} from "./snowflakes/snowflakes.component";
+import { GroupsComponent } from './groups/groups.component';
+// import {SnowflakesComponent} from "./snowflakes/snowflakes.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
     DetailsComponent,
+    GroupsComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    SnowflakesComponent,
+    // SnowflakesComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

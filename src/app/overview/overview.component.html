@@ -1,12 +1,20 @@
-<div class="grid-layout">
-  <div *ngFor="let ele of categories.categories" class="column">
-    <div class="headline">
-      <h1> {{ ele.category }} </h1>
+<div class="game-view">
+  <div class="grid-layout">
+    <div *ngFor="let ele of categories.categories" class="column">
+      <div class="headline">
+        <h1> {{ ele.category }} </h1>
+      </div>
+      <button *ngFor="let question of ele.questions" [disabled]="question.answered"
+              (click)="navigateToDetails(question)" [class]="question.answered ? '' : 'glow-on-hover'"
+              class="question">
+        {{ question.amount}}
+      </button>
     </div>
-    <button *ngFor="let question of ele.questions" [disabled]="question.answered"
-            (click)="navigateToDetails(question)" [class]="question.answered ? '' : 'glow-on-hover'"
-            class="question">
-      {{ question.amount}}
-    </button>
+  </div>
+
+  <div class="groups-display">
+    <div *ngFor="let group of groups; let i = index" [class.current-group]="i === currentGroupIndex" class="group-container">
+      <h2 class="group-name">{{ group.groupName }}</h2>
+      <h3 class="group-points">{{ group.points }} Punkte</h3>
   </div>
 </div>

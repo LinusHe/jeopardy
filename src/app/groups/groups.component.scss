@@ -1,0 +1,116 @@
+@use "src/variables" as *;
+
+.grid-layout {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  height: 100%;
+  width: 100%;
+  gap: 1.5rem;
+  height: fit-content;
+  margin: 3rem;
+
+  > div {
+    background-color: $btn-background;
+  }
+}
+
+button {
+  font-size: 4rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+#start {
+  width: initial;
+  height: initial;
+  padding: 2rem;
+}
+
+.group-view {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+}
+
+.headline {
+  background-color: $header-background;
+  color: $header-font;
+  font-size: 0.8rem;
+  word-break: break-word;
+  width: 100%;
+  min-height: 8rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+
+  .editable-group-name {
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: inherit;
+    width: auto;
+    text-align: center;
+    margin: 0.3rem;
+    max-width: 90%;
+
+    &:focus {
+      background-color: $font-color-dark; // Highlight when editing
+      outline: 2px solid $font-color-light; // Add an outline to indicate focus
+    }
+  }
+
+  h1,
+  h2 {
+    margin: 0.3rem;
+  }
+}
+
+.points-buttons {
+  display: flex;
+  background-color: $btn-points-background;
+  border-top: 1px solid $font-color-light;
+  border-bottom: 1px solid $font-color-light;
+  padding: 1rem;
+
+  button {
+    background-color: $btn-points-background;
+    color: $font-color-light;
+    font-size: 1.5rem;
+    margin: 0;
+
+    &:hover {
+      background-color: $btn-hover-background;
+    }
+  }
+}
+
+.group-members {
+  font-size: 2.5rem;
+  color: $font-color-dark;
+  padding: 2rem 4rem;
+  margin-top: 0;
+
+  li {
+    padding-bottom: 1rem;
+  }
+}
+
+.grid-layout .winner {
+  background-color: $winner-background;
+
+  .headline {
+    background-color: $winner-headline-bg;
+  }
+}
