@@ -11,6 +11,14 @@ html, body {
   cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1537.cur), auto !important;
 }
 
+* input {
+  cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1534.cur), auto !important;
+}
+
+.drag-handle {
+  cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1534.cur), auto !important;
+}
+
 button {
   color: $font-color-dark;
   background-color: $btn-background;
