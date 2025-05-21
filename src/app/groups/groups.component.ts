@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { GroupService } from '../services/group.service';
 import { Group } from '../model/data';
@@ -10,9 +10,10 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   templateUrl: './groups.component.html',
   styleUrls: ['./groups.component.scss'],
 })
-export class GroupsComponent implements OnInit {
+export class GroupsComponent implements OnInit, OnDestroy {
   groups: Group[] = [];
   gameOver: boolean = false;
+  private confettiInterval: any;
 
   constructor(private groupService: GroupService, private router: Router) {}
 
@@ -60,23 +61,18 @@ export class GroupsComponent implements OnInit {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
       // Persist changes if items are reordered within the same group
-      this.groupService.saveGroups(); 
+      this.groupService.saveGroups();
     } else {
-      const previousGroupIndex = this.groups.findIndex(group => group.members === event.previousContainer.data);
+      // const previousGroupIndex = this.groups.findIndex(group => group.members === event.previousContainer.data);
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
         event.currentIndex
       );
-      // Persist changes after moving member to a different group
-      this.groupService.moveMember(
-        previousGroupIndex,
-        groupIndex,
-        event.previousIndex,
-        event.currentIndex,
-        event.item.data
-      );
+      // The component's 'this.groups' array (which is a reference to the service's internal array)
+      // has been updated by transferArrayItem. Now, just save the state.
+      this.groupService.saveGroups();
     }
   }
 
@@ -96,11 +92,11 @@ export class GroupsComponent implements OnInit {
       return Math.random() * (max - min) + min;
     }
 
-    const interval = setInterval(function(): void {
+    this.confettiInterval = setInterval((): void => {
       const timeLeft = animationEnd - Date.now();
 
       if (timeLeft <= 0) {
-        return clearInterval(interval);
+        return clearInterval(this.confettiInterval);
       }
 
       const particleCount = 50;
@@ -109,5 +105,11 @@ export class GroupsComponent implements OnInit {
         origin: { x: randomInRange(0.1, 0.9), y: Math.random() - 0.2 }
       }));
     }, 250);
+  }
+
+  ngOnDestroy(): void {
+    if (this.confettiInterval) {
+      clearInterval(this.confettiInterval);
+    }
   }
 }
