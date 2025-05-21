@@ -176,7 +176,15 @@ button {
   padding: 0.5rem;
   font-size: 1.5rem;
   margin-right: 0.5rem;
-  border: 1px solid $font-color-light;
+  border: 2px solid $btn-points-background;
+  border-radius: 0.5rem;
+  &::placeholder {
+    color: rgba($btn-points-background, 0.9);
+  }
+  &:focus {
+    // background-color: rgba($font-color-light, 0.1);
+    outline: 1px solid $font-color-dark;
+  }
 }
 
 .add-member-btn {
