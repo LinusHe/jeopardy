@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { GroupService } from '../services/group.service';
 import { Group } from '../model/data';
 import confetti from 'canvas-confetti';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-groups',
@@ -39,6 +40,44 @@ export class GroupsComponent implements OnInit {
 
   subtractPoints(index: number, points: number): void {
     this.groupService.updateGroupPoints(index, -points);
+  }
+
+  updateMemberName(groupIndex: number, memberIndex: number, newName: string): void {
+    this.groupService.updateMemberName(groupIndex, memberIndex, newName);
+  }
+
+  addMember(groupIndex: number, memberName: string): void {
+    if (memberName && memberName.trim() !== '') {
+      this.groupService.addMember(groupIndex, memberName.trim());
+    }
+  }
+
+  deleteMember(groupIndex: number, memberIndex: number): void {
+    this.groupService.deleteMember(groupIndex, memberIndex);
+  }
+
+  drop(event: CdkDragDrop<string[]>, groupIndex: number): void {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      // Persist changes if items are reordered within the same group
+      this.groupService.saveGroups(); 
+    } else {
+      const previousGroupIndex = this.groups.findIndex(group => group.members === event.previousContainer.data);
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+      // Persist changes after moving member to a different group
+      this.groupService.moveMember(
+        previousGroupIndex,
+        groupIndex,
+        event.previousIndex,
+        event.currentIndex,
+        event.item.data
+      );
+    }
   }
 
   highlightWinnerGroup(): void {

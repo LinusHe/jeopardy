@@ -1,6 +1,6 @@
 <div class="group-view">
-  <div class="grid-layout">
-    <div *ngFor="let group of groups; let i = index" [class.winner]="group.isWinner">
+  <div class="grid-layout" cdkDropListGroup>
+    <div class="group-container" *ngFor="let group of groups; let i = index" [class.winner]="group.isWinner" cdkDropList [cdkDropListData]="group.members" (cdkDropListDropped)="drop($event, i)">
       <div class="headline">
         <!-- <h1>{{ group.groupName }}</h1> -->
         <input [(ngModel)]="group.groupName" (ngModelChange)="updateGroupName(i, group.groupName)" class="editable-group-name"/>
@@ -10,9 +10,17 @@
         <button (click)="subtractPoints(i, 50)">-50</button>
         <button (click)="addPoints(i, 50)">+50</button>
       </div>
-      <ul class="group-members">
-        <li *ngFor="let member of group.members">{{ member }}</li>
-      </ul>
+      <div class="group-members">
+        <div *ngFor="let member of group.members; let memberIndex = index" class="group-member-item" cdkDrag [cdkDragData]="member">
+          <div class="drag-handle" cdkDragHandle>⠿</div>
+          <input [(ngModel)]="group.members[memberIndex]" (ngModelChange)="updateMemberName(i, memberIndex, $event)" class="editable-member-name"/>
+          <button (click)="deleteMember(i, memberIndex)" class="delete-member-btn">🗑️</button>
+        </div>
+      </div>
+      <div class="add-member-section">
+        <input type="text" placeholder="Name" #newMemberName (keyup.enter)="addMember(i, newMemberName.value); newMemberName.value = ''" class="add-member-input"/>
+        <button (click)="addMember(i, newMemberName.value); newMemberName.value = ''" class="add-member-btn">Add</button>
+      </div>
     </div>
   </div>
   <button (click)="startGame()" id="start" *ngIf="!gameOver">Start Game</button>

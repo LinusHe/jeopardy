@@ -55,4 +55,44 @@ export class GroupService {
   saveGroups() {
     localStorage.setItem('groups', JSON.stringify(this.groups));
   }
+
+  updateMemberName(groupIndex: number, memberIndex: number, newName: string) {
+    if (this.groups[groupIndex] && this.groups[groupIndex].members[memberIndex] !== undefined) {
+      this.groups[groupIndex].members[memberIndex] = newName;
+      this.saveGroups();
+    }
+  }
+
+  addMember(groupIndex: number, memberName: string) {
+    if (this.groups[groupIndex]) {
+      this.groups[groupIndex].members.push(memberName);
+      this.saveGroups();
+    }
+  }
+
+  deleteMember(groupIndex: number, memberIndex: number) {
+    if (this.groups[groupIndex] && this.groups[groupIndex].members[memberIndex] !== undefined) {
+      this.groups[groupIndex].members.splice(memberIndex, 1);
+      this.saveGroups();
+    }
+  }
+
+  moveMember(
+    previousGroupIndex: number,
+    currentGroupIndex: number,
+    previousMemberIndex: number,
+    currentMemberIndex: number,
+    memberName: string
+  ) {
+    if (
+      this.groups[previousGroupIndex] &&
+      this.groups[currentGroupIndex]
+    ) {
+      // Remove from previous group
+      this.groups[previousGroupIndex].members.splice(previousMemberIndex, 1);
+      // Add to new group at the specified position
+      this.groups[currentGroupIndex].members.splice(currentMemberIndex, 0, memberName);
+      this.saveGroups();
+    }
+  }
 }

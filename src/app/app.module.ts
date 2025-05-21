@@ -1,6 +1,8 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 import {OverviewComponent} from './overview/overview.component';
 import {DetailsComponent} from './details/details.component';
@@ -21,6 +23,8 @@ import { GroupsComponent } from './groups/groups.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    DragDropModule,
+    RouterModule,
     // SnowflakesComponent,
   ],
   providers: [],
